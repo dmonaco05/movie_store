@@ -13,8 +13,20 @@
   </head>
 
   <body>
+    <%= render "layouts/header" %>
+    <%= render "layouts/alerts" %>
 
-    <%= yield %>
+    <div id="main-content" class="row fill-mun-height">
+      <%= yield %>
+    </div>
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr><p>&copy; MovieStore 2015</p>
+      </div>
+    </footer>
+
+    <%= javascript_include_tag "application" %>
 
   </body>
 </html>
